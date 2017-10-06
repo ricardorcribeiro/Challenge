@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Repositorios.Github.Models.Repositorio>
+
+@{
+    ViewBag.Title = "Sucesso";
+}
+
+<h2>Sucesso</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>      
+    </tr>
+}
+
+</table>
